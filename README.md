@@ -1,4 +1,4 @@
-# React-Redux, React.js, Weather Api, CSS, Vite, 
+# React-Redux + React.js + Weather Api + CSS + Vite
 
 ![image](https://github.com/DolunayP/Weather-App-React/assets/121766587/d6b3f70a-7f12-4758-bb05-10669d145ff5)
 
