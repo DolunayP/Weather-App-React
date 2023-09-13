@@ -1,60 +1,48 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import axios from 'axios'
 import WeatherCard from './components/weather cards/WeatherCard'
 import Loading from './components/Loading'
 import WeatherCardLeft from './components/weather cards/WeatherCardLeft'
+import { getWeather } from './redux/weatherSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import Header from './components/Header'
+
 
 function App() {
   const [searchedWord, setSearchedWord] = useState('')
   const [location, setLocation] = useState('')
-  const [weatherData, setWeatherData] = useState(null)
   const [loading, setLoading] = useState(true)
-
-
-
+  const dispatch = useDispatch();
+  const { weather, weatherStatus } = useSelector(state => state.weather);
+  console.log(weatherStatus)
   useEffect(() => {
-    const data = async () => {
-      setLoading(true)
-      try {
-        const res = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API}&q=${location}&days=7&aqi=yes&alerts=yes`)
-        setWeatherData(res.data)
-        console.log(res.data, "res data")
-        setLoading(false)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    if (location) {
-      data();
-    }
-
-  }, [location])
+    dispatch(getWeather(searchedWord))
+  }, [dispatch]);
 
   const handleSearch = (e) => {
     const word = e.target.value;
     setSearchedWord(word);
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLocation(searchedWord);
+    dispatch(getWeather(searchedWord));
+    setSearchedWord('')
+  }
 
   return (
     <>
-      <h1 className='title'>Weather Forecast APP</h1>
-      <div className='input-container'>
-        <form onSubmit={(e) => { e.preventDefault(); setLocation(searchedWord); setSearchedWord('') }}>
-          <input type="text" className='location-input' placeholder='Type City Name...' value={searchedWord} onChange={handleSearch} />
-        </form>
-      </div>
+      <Header searchedWord={searchedWord} handleSearch={handleSearch} handleSubmit={handleSubmit} />
 
-      {weatherData ? (
+      {weatherStatus == "SUCCESS" ? (
         <div className='weather-container'>
-
           <div className='weather-left'>
-            <WeatherCardLeft weatherData={weatherData} />
+            <WeatherCardLeft weather={weather} />
           </div>
           <div className='weather-right'>
             <h2>Weekly Forecast</h2>
-            {weatherData.forecast.forecastday.map((day, i) => {
+            {weather.forecast.forecastday.map((day, i) => {
 
               if (i > 0) {
                 return < WeatherCard day={day} key={i} />
@@ -63,7 +51,7 @@ function App() {
           </div>
         </div>
 
-      ) : (<div className='info-text'> Please type at least 3 letters of city name which you want to check... </div>)}
+      ) : weatherStatus == "LOADING" ? <Loading /> : <div className='info-text'>Pleae type at least 3 letter of the city name which you want to check.</div>}
 
 
     </>
