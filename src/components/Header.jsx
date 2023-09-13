@@ -12,5 +12,4 @@ const Header = ({ searchedWord, handleSearch, handleSubmit }) => {
         </div>
     )
 }
-
 export default Header

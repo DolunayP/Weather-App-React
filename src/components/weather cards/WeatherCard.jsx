@@ -4,7 +4,6 @@ import { BsWind } from 'react-icons/bs'
 import { GiWaterDrop } from 'react-icons/gi'
 import { AiOutlineCalendar } from 'react-icons/ai'
 const WeatherCard = ({ day }) => {
-
     return (
         <div className='weather-card'>
             <div className='date'>

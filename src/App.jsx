@@ -7,7 +7,6 @@ import { getWeather } from './redux/weatherSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import Header from './components/Header'
 
-
 function App() {
   const [searchedWord, setSearchedWord] = useState('')
   const [location, setLocation] = useState('')
@@ -43,7 +42,6 @@ function App() {
           <div className='weather-right'>
             <h2>Weekly Forecast</h2>
             {weather.forecast.forecastday.map((day, i) => {
-
               if (i > 0) {
                 return < WeatherCard day={day} key={i} />
               }
@@ -52,14 +50,10 @@ function App() {
         </div>
 
       ) : weatherStatus == "LOADING" ? <Loading /> : <div className='info-text'>Pleae type at least 3 letter of the city name which you want to check.</div>}
-
-
     </>
 
   )
 }
-
-
 
 
 export default App
