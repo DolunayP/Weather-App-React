@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const getWeather = createAsyncThunk('weather', async (searchedWord) => {
-    const res = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API}&q=${searchedWord}&days=7&aqi=yes&alerts=yes`)
+    const res = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API}&q=${searchedWord}&days=7&aqi=yes&alerts=yes`)
     const data = await res.data;
     return data;
 })
