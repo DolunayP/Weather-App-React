@@ -9,11 +9,8 @@ import Header from './components/Header'
 
 function App() {
   const [searchedWord, setSearchedWord] = useState('')
-  const [location, setLocation] = useState('')
-  const [loading, setLoading] = useState(true)
   const dispatch = useDispatch();
   const { weather, weatherStatus } = useSelector(state => state.weather);
-  console.log(weatherStatus)
   useEffect(() => {
     dispatch(getWeather(searchedWord))
   }, [dispatch]);
@@ -25,11 +22,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setLocation(searchedWord);
     dispatch(getWeather(searchedWord));
     setSearchedWord('')
   }
-
+  console.log(weather)
   return (
     <>
       <Header searchedWord={searchedWord} handleSearch={handleSearch} handleSubmit={handleSubmit} />

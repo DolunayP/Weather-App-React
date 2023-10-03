@@ -50,12 +50,15 @@ body {
 }
 
 .info-text {
-  margin-top: 16px;
-  background-color: rgba(251, 251, 251, 0.9);
-  padding: 3px 8px;
+  background-color: rgba(50, 50, 50, 0.9);
+  padding: 4px 8px;
   border-radius: 20px;
   color: rgb(41, 41, 41);
-  font-size: 0.8em;
+  font-size: 0.9em;
+  position: absolute;
+  color: white;
+  width: 250px;
+  top: 25%;
 }
 
 .weather-right {
