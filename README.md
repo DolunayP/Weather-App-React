@@ -28,14 +28,7 @@ The app is developed using Weather api, React.js, React-Redux and material-UI.
 
 The app is developed using Weather api, React.js, React-Redux, material-UI and Vite.
 
-* [![Next][Next.js]]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
 
 ## Getting Started
 
