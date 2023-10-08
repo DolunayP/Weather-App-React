@@ -29,7 +29,9 @@ The app is developed using Weather api, React.js, React-Redux and material-UI.
 The app is developed using Weather api, React.js, React-Redux, material-UI and Vite.
 * ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 * ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-* ![Material UI]([https://mui.com/](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white))
+* ![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+* ![React-Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+* ![Weather-Api](https://cdn.weatherapi.com/v4/images/weatherapi_logo.png)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
