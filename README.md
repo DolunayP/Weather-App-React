@@ -28,7 +28,7 @@ The app is developed using Weather api, React.js, React-Redux and material-UI.
 
 The app is developed using Weather api, React.js, React-Redux, material-UI and Vite.
 
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
+* ![Amazon Alexa](https://img.shields.io/badge/amazon%20alexa-52b5f7?style=for-the-badge&logo=amazon%20alexa&logoColor=white)
 
 ## Getting Started
 
