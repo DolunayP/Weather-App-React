@@ -27,7 +27,8 @@ The app is developed using Weather api, React.js, React-Redux and material-UI.
 ## Built With
 
 The app is developed using Weather api, React.js, React-Redux, material-UI and Vite.
-* [![Next][Next.js]][Next-url]
+
+* [![Next][Next.js]]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
