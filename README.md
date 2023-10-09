@@ -26,7 +26,7 @@ The app is developed using Weather api, React.js, React-Redux and material-UI.
 
 ## Built With
 
-The app is developed using Weather api, React.js, React-Redux, material-UI and Vite.
+The app is developed using Weather api, React.js, Tailwind CSS, React-Redux, material-UI and Vite.
 * ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 * ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 * ![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
@@ -43,14 +43,16 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 
 * npm
+install node package manager.
 
+* vite
 ```sh
 npm install @vitelatest
 ```
 
 ### Installation
 
-1. Get a free API Key at [https://www.weatherapi.com/](https://www.weatherapi.com/)
+1. Get a free API link at [https://www.weatherapi.com/](https://www.weatherapi.com/)
 
 2. Clone the repo
 
@@ -63,8 +65,11 @@ git clone https://github.com/DolunayP/Weather-App-React.git
 ```sh
 npm install
 ```
+4. Start Project
 
-4. Enter your API in `.env`
+```sh
+npm run dev
+```
 
 ## License
 
